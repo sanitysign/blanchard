@@ -762,6 +762,7 @@ body .hero-bg-fade::after {
   background-image: url(../img/gallery-bg.webp);
   background-size: cover;
   background-position: center bottom;
+  overflow-x: hidden;
 
   &__grid {
     padding-top: 80px;
@@ -1225,6 +1226,8 @@ body .hero-bg-fade::after {
 .events {
   padding-top: 40px;
   padding-bottom: 80px;
+  overflow-x: hidden;
+
 
   &__heading {
     margin-bottom: 17px;
@@ -1529,6 +1532,7 @@ body .hero-bg-fade::after {
   background-image: url(../img/issues-bg.webp);
   background-size: cover;
   background-position: center bottom;
+  overflow-x: hidden;
 
   &__grid {
     width: 100%;
