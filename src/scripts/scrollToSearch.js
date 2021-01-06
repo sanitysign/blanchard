@@ -1,36 +1,28 @@
-let highlightTimeout
-
 $(`body`).on(`click`, function(e) {
 
-  if ($(e.target).closest(`.search`).length === 0) {
-    $(`.search__results`).text(` `)
-  }
+  if (!$(e.target).hasClass(`search__result`)) return
 
-  if ($(e.target).closest(`.search__result`).length !== 0 || $(e.target).closest(`.search__submit`).length !== 0) {
+  const section = $(e.target).attr(`data-selector`)
+  const sectionTop = $(`.${section}`).offset().top
 
-    if ($(`.search__result`).length === 0) return
-    
-    const selector = $(e.target).closest(`.search__result`).length !== 0 ?
-                        $(e.target).closest(`.search__result`).data().selector :
-                        $(`.search__result`).first().data().selector
+  $(`body, html`).animate({
+    scrollTop: sectionTop
+  }, 500)
+})
 
-    if ($(selector).length !== 0) {
+$(`.search__button`).on(`click`, function() {
 
-      const scroll = $(selector).closest(`div`).length !==0 ? 
-                        $(selector).closest(`div`).offset().top : 
-                        $(selector).offset().top
+  const searchResult = $(this).siblings(`.search__results`).find(`.search__result`).first()
 
-      $(`body, html`).animate({
-        scrollTop: scroll - 10
-      }, 500)
+  if (searchResult.length === 0) return
 
-      $(selector).addClass(`highlighted`)
-      highlightTimeout = setTimeout(() => {
+  const section = searchResult.attr(`data-selector`)
+  const sectionTop = $(`.${section}`).offset().top
 
-        $(selector).removeClass(`highlighted`)
-        clearTimeout(highlightTimeout)
+  $(this).siblings(`.search__results`).html(``)
+  $(this).siblings(`.search__input`).val(``)
 
-      }, 3000)
-    }
-  }
+  $(`body, html`).animate({
+    scrollTop: sectionTop
+  }, 500)
 })

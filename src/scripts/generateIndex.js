@@ -1,14 +1,15 @@
 export function generateIndex() {
-    const content = document.querySelectorAll('body *')
+  const content = document.querySelectorAll('main *')
+  const socials = [`whatsapp`, `telegram`, `вконтакте`, `instagram`, `facebook`]
   let index = []
   let counter = 0
 
-  const header = document.querySelector('.header')
+  main: for (const item of content) {
 
-  for (const item of content) {
-
-    if (item.closest(`.special`)) continue
-
+    if (item.classList.contains(`search__label`) || item.classList.contains(`issues-slide__btn`)) continue
+    if (item.classList.contains(`issues-slide__btn`) || item.classList.contains(`issues-slide__price`)) continue
+    if (item.textContent.length < 5) continue
+    
     if ({}.toString.call(item.firstChild) === `[object Text]` && item.firstChild.textContent.trim().length !== 0) {
       let content = Array.from(item.textContent.trim().replaceAll(`\n`, `, `).replaceAll(`\t`, ` `))
 
@@ -18,46 +19,56 @@ export function generateIndex() {
         }
       }
 
-      const section = item.closest(`h2`) ? 
-                      item.closest(`h2`).textContent : 
-                      item.closest(`section`) ? 
+      const section = item.closest(`section`).querySelector('h2') ? 
                       item.closest(`section`).querySelector('h2').textContent : 
-                      item.closest(`header`) ?
-                      `Шапка сайта` :
-                      `Подвал сайта`
+                      `Верхняя секция`
 
-    let type
-    switch (item.tagName) {
-      case `A`: type = `ссылка`
-      break
+      const description = item.closest(`.filters`) ?
+                          `(фильтры)` :
+                          item.closest(`.gallery__swiper`) ?
+                          `(слайдер)` :
+                          item.closest(`.catalog__tab`) ?
+                          `(${item.closest(`.catalog__tab`).dataset.descr} язык)` :
+                          item.closest(`.accordion__row`) ?
+                          `(аккордион)` :
+                          item.closest(`.issues__swiper`) ?
+                          `(книга)` :
+                          item.closest(`.events__swiper`) ?
+                          `(карточка)` :
+                          ` `
 
-      case `BUTTON`: type = `кнопка`
-      break
+      if (description === `(аккордион)`) {
 
-      case `H1`:
-      case `H2`:
-      case `H3`:
-      case `H4`: type = `оглавление`
-      break
+        for (const obj of index) {
 
-      case `LABEL`: type = `поле для ввода`
-      break
-
-      default: type = `текст`
-      break
+          if (obj.text === content.join(``)) continue main
+        }
       }
 
       index.push((
         {
           id: counter++,
-          selector: `.` + item.className.replaceAll(` `, `.`),
-          type: type,
-          section: section,
+          selector: item.closest(`.header`) ? `header` : item.closest(`section`).className.replaceAll(` `, `.`),
+          description: section + ' ' + description,
           text: content.join(``),
         }
       ))
     }
   }
+
+  for (const item of socials) {
+
+    index.push((
+      {
+        id: counter++,
+        selector: `footer`,
+        description: `подвал`,
+        text: item,
+      }
+    ))
+  }
+  
+  // console.log(index)
   console.table(index)
 
   function downloadIndex() {
@@ -70,4 +81,4 @@ export function generateIndex() {
 
   // downloadIndex() 
 }
-// generateIndex()
+generateIndex()

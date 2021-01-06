@@ -123,6 +123,37 @@ body {
   }
 }
 
+.outline {
+  transition: color .3s ease-in-out;
+  
+  &:focus {
+    outline-offset: 6px;
+    outline: 2px solid $btn-focus;
+  }
+
+  &:hover {
+    transition: color .3s ease-in-out;
+    color: #C283F3;
+  }
+
+  &:active {
+    outline-offset: 6px;
+    transition: color .3s ease-in-out;
+    outline: 2px solid transparent;
+    color: $btn-focus;
+  }
+
+  &:hover::after {
+    transition: border-color .3s ease-in-out;
+    border-color: #C283F3;
+  }
+
+  &:active::after {
+    transition: border-color .3s ease-in-out;
+    border-color: $btn-focus;
+  }
+}
+
 .search {
   position: relative;
   display: block;
@@ -190,36 +221,33 @@ body {
       outline: none;
     }
   }
-}
 
-.outline {
-  transition: color .3s ease-in-out;
-  
-  &:focus {
-    outline-offset: 6px;
-    outline: 2px solid $btn-focus;
+  &__results {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 200%;
+    right: 0;
+    max-width: 400px;
   }
 
-  &:hover {
-    transition: color .3s ease-in-out;
-    color: #C283F3;
-  }
+  &__result {
+    width: 80vw;
+    max-width: 300px;
+    padding: 5px 10px;
+    color: $text-white;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: rgba(0, 0, 0, 0.4);
 
-  &:active {
-    outline-offset: 6px;
-    transition: color .3s ease-in-out;
-    outline: 2px solid transparent;
-    color: $btn-focus;
-  }
+    &:focus {
+      outline-offset: 0;
+    }
 
-  &:hover::after {
-    transition: border-color .3s ease-in-out;
-    border-color: #C283F3;
-  }
-
-  &:active::after {
-    transition: border-color .3s ease-in-out;
-    border-color: $btn-focus;
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
   }
 }
 
@@ -782,11 +810,6 @@ body .hero-bg-fade::after {
     width: 100%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-
-    &-container {
-      max-height: 100vh;
-      overflow-y: hidden;
-    }
   }
 
   &__buttons {
@@ -981,17 +1004,17 @@ body .hero-bg-fade::after {
     margin-right: 50px;
   }
 
-  &__grid {
+  &__tab {
     display: none;
+  }
+
+  &__grid {
+    display: grid;
     grid-template-columns: 46.9% 1fr;
     grid-template-areas:  "text text"
                           "card accordion";
     row-gap: 37px;
     column-gap: 50px;
-
-    &.active {
-      display: grid;
-    }
   }
 
   &__text {
@@ -1012,26 +1035,19 @@ body .hero-bg-fade::after {
   }
 }
 
-// .catalog__flag.active::after {
-//   position: absolute;
-//   content: "";
-//   display: block;
-//   width: 66px;
-//   height: 66px;
-//   top: 50%;
-//   left: 50%;
-//   border-radius: 50%;
-//   transform: translate(-50%, -50%);
-//   // border-color: transparent;
-//   // transition: border-color .3s ease-in-out;
-//   border-color: $btn-main;
-//   transition: border-color .3s ease-in-out;
-// }
+.tab {
+
+}
+
 
 .card {
 
   &__image {
     width: 100%;
+    max-width: 750px;
+    max-height: 470px;
+    object-fit: contain;
+    object-position: center;
   }
 
   &__text-block {
@@ -1059,6 +1075,11 @@ body .hero-bg-fade::after {
     font-size: 16px;
     line-height: 32px;
     color: $text-main;
+
+    &-wrap {
+      max-height: 514px;
+      overflow: hidden;
+    }
   }
 }
 
@@ -1136,8 +1157,13 @@ body .hero-bg-fade::after {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: $text-main;
     border: none;
     border-bottom: 1px solid #CACACA;
+    overflow-y: auto;
 
     &.ui-accordion-content-active {
       border-top: 1px solid $btn-main;
@@ -1163,6 +1189,10 @@ body .hero-bg-fade::after {
 
     &.active {
       color: $text-accent;
+    }
+
+    &:focus {
+      outline-offset: -2px;
     }
   }
 }
@@ -3039,10 +3069,38 @@ body .hero-bg-fade::after {
 
 @include phone-medium {
 
+  .header {
+
+    &__top {
+      padding: 10px 0 12px 0;
+    }
+
+    &__logo {
+      padding-right: 2px;
+      height: auto;
+      width: 100%;
+      max-width: 97px;
+    }
+  }
+
   .burger {
+    width: 20px;
+    height: 15px;
 
     &__line {
       height: 2px;
+    }
+  }
+
+  .search {
+
+    &__button_top {
+      margin-right: 0;
+    }
+
+    &__icon {
+      width: 16px;
+      height: 16px;
     }
   }
 
@@ -3162,35 +3220,13 @@ body .hero-bg-fade::after {
 
 @include phone-small {
 
-  .header {
-
-    &__top {
-      padding: 10px 0 12px 0;
-    }
-
-    &__logo {
-      padding-right: 2px;
-      height: auto;
-      width: 100%;
-      max-width: 97px;
-    }
+  .search__results {
+    top: 160%;
+    background-color: #000;
   }
 
-  .burger {
-    width: 20px;
-    height: 15px;
-  }
-
-  .search {
-
-    &__button_top {
-      margin-right: 0;
-    }
-
-    &__icon {
-      width: 16px;
-      height: 16px;
-    }
+  .search__result {
+    background-color: #111;
   }
 
   .hero {

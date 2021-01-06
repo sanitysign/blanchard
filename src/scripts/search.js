@@ -1,56 +1,65 @@
-import {searchJSON} from './searchJSON.js'
-// import {generateIndex} from './generateIndex.js'
+let loaded = false
 
-const lunr = require('lunr')
-require("lunr-languages/lunr.stemmer.support")(lunr)
-require('lunr-languages/lunr.multi')(lunr)
-require("lunr-languages/lunr.ru")(lunr)
+searchInputBottom.addEventListener(`focus`, loadLunr, {once: true, passive: true})
+searchInputTop.addEventListener(`focus`, loadLunr, {once: true, passive: true})
 
-const searchArray = JSON.parse(searchJSON)
-const searchResults = document.querySelector('.search__results')
+function loadLunr() {
 
-const idx = lunr(function () {
-  this.use(lunr.multiLanguage('en', 'ru'))
-  this.b(0)
-  this.field("text")
+  if (loaded) return
 
-  for (const obj of searchArray) {
-    this.add(obj)
-  }
-})
+  loaded = true
 
-searchInput.oninput = (e) => {
+  import('./searchJSON.js').then(({searchJSON}) => {
 
-  searchResults.textContent = ``
+    import(`lunr`).then((lunr) => {
 
-  if (searchInput.value.trim().length === 0) return
+      lunr = lunr.default
 
-  const result = idx.search(searchInput.value.trim())
+      require("lunr-languages/lunr.stemmer.support")(lunr)
+      require('lunr-languages/lunr.multi')(lunr)
+      require("lunr-languages/lunr.ru")(lunr)
+      
+      const searchArray = JSON.parse(searchJSON)
+      const searchResultsTop = document.querySelector('.search__results_top')
+      const searchResultsBottom = document.querySelector('.search__results_bottom')
 
-  if (result.length !== 0) {
+      const idx = lunr(function () {
+        this.use(lunr.multiLanguage('en', 'ru'))
+        this.b(0)
+        this.field("text")
 
-    for (let i = 0 ; i < result.length ; i++) {
+        for (const obj of searchArray) {
+          this.add(obj)
+        }
+      })
 
-      if (i >= 3) break
+      searchInputTop.addEventListener(`input`, () => showSearchResult(searchInputTop, searchResultsTop))
+      searchInputBottom.addEventListener(`input`, () => showSearchResult(searchInputBottom, searchResultsBottom))
 
-      const searchEntry = searchArray[result[i].ref]
+      function showSearchResult(searchInput, searchResultsField) {
 
-      const searchResult = document.createElement('button')
-      searchResult.classList.add(`search__result`)
-      searchResult.dataset.selector = searchEntry.selector
+        searchResultsField.textContent = ``
+      
+        if (searchInput.value.trim().length === 0) return
+      
+        const result = idx.search(searchInput.value.trim())
+      
+        if (result.length !== 0) {
 
-      const searchSection = document.createElement('span')
-      searchSection.classList.add(`search__section`)
-      searchSection.textContent = searchEntry.section
+          for (let i = 0 ; i < result.length ; i++) {
+      
+            if (i >= 3) break
+      
+            const searchEntry = searchArray[result[i].ref]
 
-      const searchType = document.createElement('span')
-      searchType.classList.add(`search__type`)
-      searchType.textContent = searchEntry.type
-
-      searchResult.append(searchSection, searchType)
-      searchResults.append(searchResult)
-    }
-    
-  }
-  
+            const searchResult = document.createElement('button')
+            searchResult.classList.add(`search__result`, `btn`, `outline`)
+            searchResult.dataset.selector = searchEntry.selector
+            searchResult.textContent = `Секция: ` + searchEntry.description
+            searchResultsField.append(searchResult)
+          }
+        }
+      }
+    })
+  })
 }
