@@ -42,11 +42,12 @@
           <label class="search__label visually-hidden" for="searchInputTop">Поиск по сайту</label>
           <button class="search__button search__button_top btn" type="submit" name="searchSubmit" aria-label="Поиск по сайту">
             <svg class="search__icon search__icon_top" width="29.45" height="28.82" viewBox="0 0 29.45 28.82" fill="white" xmlns="http://www.w3.org/2000/svg">
-              <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58105 21.0461)""/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2725 5.32763 13.5104C5.32763 7.74821 10.0376 2.84674 16.1246 2.84674C22.2115 2.84674 26.9215 7.74821 26.9215 13.5104C26.9215 19.2725 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14867 8.76285 0.180832 16.1246 0.180832C23.4863 0.180832 29.4541 6.14867 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z""/>
+              <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58105 21.0461)"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2725 5.32763 13.5104C5.32763 7.74821 10.0376 2.84674 16.1246 2.84674C22.2115 2.84674 26.9215 7.74821 26.9215 13.5104C26.9215 19.2725 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14867 8.76285 0.180832 16.1246 0.180832C23.4863 0.180832 29.4541 6.14867 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"/>
             </svg>
           </button>
           <input class="search__input search__input_top" type="text" name="searchInput" id="searchInputTop" placeholder="Поиск по сайту">
+          <div class="search__results search__results_top"></div>
         </form>
         <div class="header__login-wrap">
             <a href="#" class="header__login link outline">
@@ -217,14 +218,15 @@
           </li>
         </ul>
         <form class="header__search header__search_bottom search search_bottom">
-          <label class="search__label visually-hidden" for="searchInputTop">Поиск по сайту</label>
+          <label class="search__label visually-hidden" for="searchInputBottom">Поиск по сайту</label>
           <button class="search__button search__button_bottom btn" type="submit" name="searchSubmit" aria-label="Поиск по сайту">
             <svg class="search__icon search__icon_bottom" width="22" height="22" viewBox="0 0 22 22" fill="black" xmlns="http://www.w3.org/2000/svg">
               <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"/>
               </svg>
           </button>
-          <input class="search__input search__input_bottom" type="text" name="searchInput" id="searchInputTop" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+          <input class="search__input search__input_bottom" type="text" name="searchInput" id="searchInputBottom" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+          <div class="search__results search__results_bottom"></div>
         </form>
       </div>
     </div>
@@ -257,19 +259,19 @@
             <div class="gallery__filters filters">
               <p class="filters__text">Фильтровать по:</p>
               <select name="author" id="authorSelect" class="filters__select active-custom" tabindex="0" aria-label="Выберите автора">
-                <option class="filters__option" placeholder value="placeholder">Автор</option>
+                <option class="filters__option" value="placeholder">Автор</option>
                 <option class="filters__option" value="author1">Автор 1</option>
                 <option class="filters__option" value="author2">Автор 2</option>
                 <option class="filters__option" value="author3">Автор 3</option>
               </select>
               <select name="author" id="directionSelect" class="filters__select" tabindex="0" aria-label="Выберите направление">
-                <option class="filters__option" placeholder value="placeholder">Направление</option>
+                <option class="filters__option" value="placeholder">Направление</option>
                 <option class="filters__option" value="author1">Направление 1</option>
                 <option class="filters__option" value="author2">Направление 2</option>
                 <option class="filters__option" value="author3">Направление 3</option>
               </select>
               <select name="author" id="techniqueSelect" class="filters__select" tabindex="0" aria-label="Выберите технику">
-                <option class="filters__option" placeholder value="placeholder">Техника</option>
+                <option class="filters__option" value="placeholder">Техника</option>
                 <option class="filters__option" value="author1">Техника 1</option>
                 <option class="filters__option" value="author2">Техника 2</option>
                 <option class="filters__option" value="author3">Техника 3</option>
@@ -333,21 +335,76 @@
             <button class="catalog__flag btn" data-lang="1">
               <img src="./img/flag-1-france.png" loading="lazy" alt="Французский язык" class="catalog__icon">
             </button>
+            <div class="catalog__tab tab tab_french" data-descr="французский" data-lang="1">
+              <div class="tab__description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate blanditiis neque, non tenetur nam, necessitatibus distinctio assumenda illum culpa quibusdam cumque soluta eveniet adipisci eligendi odio minima magni maiores facilis doloremque recusandae numquam iste, facere eos exercitationem. Voluptates, reiciendis illo!
+              </div>
+              <img src="./img/event-1.webp" alt="французский" class="tab__image">
+              <div class="tab__heading">French</div>
+              <div class="tab__date">Lorem ipsum dolor sit.</div>
+              <div class="tab__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque non voluptatem magni architecto est numquam, odio quae eligendi amet excepturi minima, deserunt quas assumenda! Labore sint iure corporis, fuga, dolorem cumque mollitia enim, unde aliquid illum assumenda eos eveniet sit hic maiores consectetur. Culpa quasi atque vitae provident voluptatibus ipsa!
+              </div>
+            </div>
             <button class="catalog__flag btn" data-lang="2">
               <img src="./img/flag-2-germany.png" loading="lazy" alt="Немецкий язык" class="catalog__icon">
             </button>
+            <div class="catalog__tab tab tab_german" data-descr="немецкий" data-lang="2">
+              <div class="tab__description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate blanditiis neque, non tenetur nam, necessitatibus distinctio assumenda illum culpa quibusdam cumque soluta eveniet adipisci eligendi odio minima magni maiores facilis doloremque recusandae numquam iste, facere eos exercitationem. Voluptates, reiciendis illo!
+              </div>
+              <img src="./img/event-2.webp" alt="немецкий" class="tab__image">
+              <div class="tab__heading">German</div>
+              <div class="tab__date">Lorem ipsum sit.</div>
+              <div class="tab__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque non voluptatem magni architecto est numquam, odio quae eligendi amet excepturi minima, deserunt quas assumenda! Labore sint iure corporis, fuga, dolorem cumque mollitia enim, unde aliquid illum assumenda eos eveniet sit hic maiores consectetur. Culpa quasi atque vitae provident voluptatibus ipsa! Culpa quasi atque vitae provident voluptatibus ipsa!
+              </div>
+            </div>
             <button class="catalog__flag btn" data-lang="3">
               <img src="./img/flag-3-italy.png" loading="lazy" alt="Итальянский язык" class="catalog__icon">
             </button>
+            <div class="catalog__tab tab tab_italian" data-descr="итальянский" data-lang="3">
+              <div class="tab__description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate blanditiis neque, non tenetur nam, necessitatibus distinctio assumenda illum culpa quibusdam cumque soluta eveniet adipisci eligendi odio minima magni maiores facilis doloremque recusandae numquam iste, facere eos exercitationem. Voluptates, reiciendis illo!
+              </div>
+              <img src="./img/event-3.webp" alt="итальянский" class="tab__image">
+              <div class="tab__heading">Italian</div>
+              <div class="tab__date">Lorem ipsum dolor sit.</div>
+              <div class="tab__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque non voluptatem magni architecto est numquam, odio quae eligendi amet excepturi minima, deserunt quas assumenda! Labore sint iure corporis, fuga, dolorem cumque mollitia enim, eveniet sit hic maiores consectetur. Culpa quasi atque vitae provident voluptatibus ipsa! Culpa quasi atque vitae provident voluptatibus ipsa!
+              </div>
+            </div>
             <button class="catalog__flag active btn" data-lang="4">
               <img src="./img/flag-4-russia.png" loading="lazy" alt="Русский язык" class="catalog__icon">
             </button>
+            <div class="catalog__tab tab tab_russian" data-descr="русский" data-lang="4">
+              <div class="tab__description">
+                Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
+              </div>
+              <img src="./img/card-image-1.webp" alt="Доменико Гирландайо" class="tab__image">
+              <div class="tab__heading">Доменико Гирландайо</div>
+              <div class="tab__date">2 июня 1448 — 11 января 1494.</div>
+              <div class="tab__text">
+                Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
+              </div>
+            </div>
             <button class="catalog__flag btn" data-lang="5">
               <img src="./img/flag-5-belgium.png" loading="lazy" alt="Бельгийский язык" class="catalog__icon">
             </button>
+            <div class="catalog__tab tab tab_belgian" data-descr="бельгийский" data-lang="5">
+              <div class="tab__description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate blanditiis neque, non tenetur nam, necessitatibus distinctio assumenda illum culpa quibusdam cumque soluta eveniet adipisci eligendi odio minima magni maiores facilis doloremque recusandae numquam iste, facere eos exercitationem. Voluptates, reiciendis illo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, mollitia!
+              </div>
+              <img src="./img/event-4.webp" alt="бельгийский" class="tab__image">
+              <div class="tab__heading">Belgian</div>
+              <div class="tab__date">Lorem ipsum sit.</div>
+              <div class="tab__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque non voluptatem magni architecto est numquam, odio quae eligendi sit hic maiores consectetur. Culpa quasi atque vitae provident voluptatibus ipsa! Culpa quasi atque vitae provident voluptatibus ipsa!
+              </div>
+            </div>
           </div>
         </div>
-        <div class="catalog__grid" data-block="1">
+        <div class="catalog__grid">
           <p class="catalog__text">
             Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. 
           </p>
@@ -356,828 +413,11 @@
             <div class="card__text-block">
               <h3 class="card__heading" data-heading="Доменико Гирландайо">Доменико Гирландайо</h3>
               <p class="card__date" data-date="Доменико Гирландайо">2 июня 1448 — 11 января 1494.</p>
-              <p class="card__text" data-text="Доменико Гирландайо">
-                Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
-              </p>
-            </div>
-          </div>
-          <div class="catalog__accordion accordion">
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1400 по 1499 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1500 по 1599 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1600 по 1699 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1700 по 1799 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1800 по 1899 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1900 по 1999 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 2000 г.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="catalog__grid" data-block="2">
-          <p class="catalog__text">
-            Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. 
-          </p>
-          <div class="catalog__card card" data-card="Доменико Гирландайо">
-            <img src="./img/card-image-1.webp" loading="lazy" alt="Доменико Гирландайо" class="card__image" data-image="Доменико Гирландайо">
-            <div class="card__text-block">
-              <h3 class="card__heading" data-heading="Доменико Гирландайо">Доменико Гирландайо</h3>
-              <p class="card__date" data-date="Доменико Гирландайо">2 июня 1448 — 11 января 1494.</p>
-              <p class="card__text" data-text="Доменико Гирландайо">
-                Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
-              </p>
-            </div>
-          </div>
-          <div class="catalog__accordion accordion">
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1400 по 1499 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1500 по 1599 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1600 по 1699 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1700 по 1799 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1800 по 1899 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1900 по 1999 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 2000 г.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="catalog__grid" data-block="3">
-          <p class="catalog__text">
-            Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. 
-          </p>
-          <div class="catalog__card card" data-card="Доменико Гирландайо">
-            <img src="./img/card-image-1.webp" loading="lazy" alt="Доменико Гирландайо" class="card__image" data-image="Доменико Гирландайо">
-            <div class="card__text-block">
-              <h3 class="card__heading" data-heading="Доменико Гирландайо">Доменико Гирландайо</h3>
-              <p class="card__date" data-date="Доменико Гирландайо">2 июня 1448 — 11 января 1494.</p>
-              <p class="card__text" data-text="Доменико Гирландайо">
-                Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
-              </p>
-            </div>
-          </div>
-          <div class="catalog__accordion accordion">
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1400 по 1499 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1500 по 1599 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1600 по 1699 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1700 по 1799 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1800 по 1899 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1900 по 1999 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 2000 г.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="catalog__grid active" data-block="4">
-          <p class="catalog__text">
-            Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. 
-          </p>
-          <div class="catalog__card card" data-card="Доменико Гирландайо">
-            <img src="./img/card-image-1.webp" loading="lazy" alt="Доменико Гирландайо" class="card__image" data-image="Доменико Гирландайо">
-            <div class="card__text-block">
-              <h3 class="card__heading" data-heading="Доменико Гирландайо">Доменико Гирландайо</h3>
-              <p class="card__date" data-date="Доменико Гирландайо">2 июня 1448 — 11 января 1494.</p>
-              <p class="card__text" data-text="Доменико Гирландайо">
-                Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
-              </p>
+              <div class="card__text-wrap">
+                <p class="card__text" data-text="Доменико Гирландайо">
+                  Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
+                </p>
+              </div>
             </div>
           </div>
           <div class="catalog__accordion accordion">
@@ -1220,28 +460,24 @@
               <button class="accordion__icon btn arrow"></button>
             </h3>
             <div class="accordion__row">
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Биссоло, Франческо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Брамантино</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бреа, Людовико</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Веккьетта</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Андреа Верроккьо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Граначчи, Франческо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Джованни да Удине</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Джованни ди Паоло</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Джорджоне</a></div>
             </div>
             <h3 class="accordion__heading">
               <a href="#" class="accordion__heading-link outline">
@@ -1250,28 +486,21 @@
               <button class="accordion__icon btn arrow"></button>
             </h3>
             <div class="accordion__row">
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Биссоло, Франческо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Брамантино</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бреа, Людовико</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Веккьетта</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Андреа Верроккьо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Граначчи, Франческо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a></div>
             </div>
             <h3 class="accordion__heading">
               <a href="#" class="accordion__heading-link outline">
@@ -1280,28 +509,21 @@
               <button class="accordion__icon btn arrow"></button>
             </h3>
             <div class="accordion__row">
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Биссоло, Франческо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Брамантино</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бреа, Людовико</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Веккьетта</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Андреа Верроккьо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Граначчи, Франческо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a></div>
             </div>
             <h3 class="accordion__heading">
               <a href="#" class="accordion__heading-link outline">
@@ -1310,28 +532,21 @@
               <button class="accordion__icon btn arrow"></button>
             </h3>
             <div class="accordion__row">
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Биссоло, Франческо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Брамантино</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бреа, Людовико</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Веккьетта</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Андреа Верроккьо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Граначчи, Франческо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a></div>
             </div>
             <h3 class="accordion__heading">
               <a href="#" class="accordion__heading-link outline">
@@ -1340,28 +555,21 @@
               <button class="accordion__icon btn arrow"></button>
             </h3>
             <div class="accordion__row">
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Биссоло, Франческо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Брамантино</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бреа, Людовико</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Веккьетта</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Андреа Верроккьо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Граначчи, Франческо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a></div>
             </div>
             <h3 class="accordion__heading">
               <a href="#" class="accordion__heading-link outline">
@@ -1370,311 +578,21 @@
               <button class="accordion__icon btn arrow"></button>
             </h3>
             <div class="accordion__row">
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Lorem, ipsum dolor.</a></div>
-            </div>
-          </div>
-        </div>
-        <div class="catalog__grid" data-block="5">
-          <p class="catalog__text">
-            Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. 
-          </p>
-          <div class="catalog__card card" data-card="Доменико Гирландайо">
-            <img src="./img/card-image-1.webp" loading="lazy" alt="Доменико Гирландайо" class="card__image" data-image="Доменико Гирландайо">
-            <div class="card__text-block">
-              <h3 class="card__heading" data-heading="Доменико Гирландайо">Доменико Гирландайо</h3>
-              <p class="card__date" data-date="Доменико Гирландайо">2 июня 1448 — 11 января 1494.</p>
-              <p class="card__text" data-text="Доменико Гирландайо">
-                Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
-              </p>
-            </div>
-          </div>
-          <div class="catalog__accordion accordion">
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1400 по 1499 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1500 по 1599 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1600 по 1699 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1700 по 1799 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1800 по 1899 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 1900 по 1999 гг.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
-            </div>
-            <h3 class="accordion__heading">
-              <a href="#" class="accordion__heading-link outline">
-                C 2000 г.
-              </a>
-              <button class="accordion__icon btn arrow"></button>
-            </h3>
-            <div class="accordion__row">
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a>
-                <a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a>
-                <a href="#" class="accordion__name-link outline">Биссоло, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a>
-                <a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a>
-                <a href="#" class="accordion__name-link outline">Брамантино</a>
-                <a href="#" class="accordion__name-link outline">Бреа, Людовико</a>
-                <a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Веккьетта</a>
-                <a href="#" class="accordion__name-link outline">Андреа Верроккьо</a>
-                <a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a>
-                <a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a>
-                <a href="#" class="accordion__name-link outline">Граначчи, Франческо</a>
-                <a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a>
-                <a href="#" class="accordion__name-link outline">Джованни да Удине</a>
-                <a href="#" class="accordion__name-link outline">Джованни ди Паоло</a>
-                <a href="#" class="accordion__name-link outline">Джорджоне</a>
-              </p>
-              <p class="accordion__text">
-                <a href="#" class="accordion__name-link outline">Парентино, Бернардо</a>
-                <a href="#" class="accordion__name-link outline">Пезеллино</a>
-                <a href="#" class="accordion__name-link outline">Пьетро Перуджино</a>
-                <a href="#" class="accordion__name-link outline">Перуцци, Бальдассаре</a>
-                <a href="#" class="accordion__name-link outline">Пизанелло</a>
-                <a href="#" class="accordion__name-link outline">Пинтуриккьо</a>
-              </p>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бенедетто ди Биндо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бергоньоне, Амброджо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Биссоло, Франческо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Больтраффио, Джованни</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бонсиньори, Франческо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Боттичини, Рафаэлло</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Брамантино</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бреа, Людовико</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Бьяджо д’Антонио Туччи</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Веккьетта</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Андреа Верроккьо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline active">Доменико Гирландайо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Беноццо Гоццоли</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Граначчи, Франческо</a></div>
+              <div class="accordion__name-wrap"><a href="#" class="accordion__name-link outline">Грегорио ди Чекко</a></div>
             </div>
           </div>
         </div>
@@ -1813,62 +731,62 @@
                 <label class="categories__label categories__label_first" data-index="0">
                   <input type="checkbox" name="checkbox" class="categories__checkbox" aria-label="Выберите категорию Бестселлеры">
                   <span class="categories__check"></span>
-                  <button class="categories__link outline btn" tabindex="-1">Бестселлеры</button>
+                  <a class="categories__link outline btn" tabindex="-1">Бестселлеры</a>
                 </label>
                 <label class="categories__label" data-index="1">
                   <input type="checkbox" name="checkbox" class="categories__checkbox" aria-label="Выберите категорию Искусство">
                   <span class="categories__check"></span>
-                  <button class="categories__link outline btn" tabindex="-1">Искусство</button>
+                  <a class="categories__link outline btn" tabindex="-1">Искусство</a>
                 </label>
                 <label class="categories__label" data-index="2">
                   <input type="checkbox" name="checkbox" class="categories__checkbox" aria-label="Выберите категорию Архитектура">
                   <span class="categories__check"></span>
-                  <button class="categories__link outline btn" tabindex="-1">Архитектура</button>
+                  <a class="categories__link outline btn" tabindex="-1">Архитектура</a>
                 </label>
                 <label class="categories__label" data-index="3">
                   <input type="checkbox" name="checkbox" class="categories__checkbox" aria-label="Выберите категорию Дизайн" checked>
                   <span class="categories__check"></span>
-                  <button class="categories__link outline btn" tabindex="-1">Дизайн</button>
+                  <a class="categories__link outline btn" tabindex="-1">Дизайн</a>
                 </label>
                 <label class="categories__label" data-index="4">
                   <input type="checkbox" name="checkbox" class="categories__checkbox" aria-label="Выберите категорию Мода">
                   <span class="categories__check"></span>
-                  <button class="categories__link outline btn" tabindex="-1">Мода</button>
+                  <a class="categories__link outline btn" tabindex="-1">Мода</a>
                 </label>
                 <label class="categories__label" data-index="5">
                   <input type="checkbox" name="checkbox" class="categories__checkbox" aria-label="Выберите категорию Детям">
                   <span class="categories__check"></span>
-                  <button class="categories__link outline btn" tabindex="-1">Детям</button>
+                  <a class="categories__link outline btn" tabindex="-1">Детям</a>
                 </label>
                 <label class="categories__label" data-index="6">
                   <input type="checkbox" name="checkbox" class="categories__checkbox" aria-label="Выберите категорию Художественная литература">
                   <span class="categories__check"></span>
-                  <button class="categories__link outline btn" tabindex="-1">Художественная литература</button>
+                  <a class="categories__link outline btn" tabindex="-1">Художественная литература</a>
                 </label>
                 <label class="categories__label" data-index="7">
                   <input type="checkbox" name="checkbox" class="categories__checkbox" aria-label="Выберите категорию Публицистика">
                   <span class="categories__check"></span>
-                  <button class="categories__link outline btn" tabindex="-1">Публицистика</button>
+                  <a class="categories__link outline btn" tabindex="-1">Публицистика</a>
                 </label>
                 <label class="categories__label" data-index="8">
                   <input type="checkbox" name="checkbox" class="categories__checkbox" aria-label="Выберите категорию Путеводители">
                   <span class="categories__check"></span>
-                  <button class="categories__link outline btn" tabindex="-1">Путеводители</button>
+                  <a class="categories__link outline btn" tabindex="-1">Путеводители</a>
                 </label>
                 <label class="categories__label" data-index="9">
                   <input type="checkbox" name="checkbox" class="categories__checkbox" aria-label="Выберите категорию Философия">
                   <span class="categories__check"></span>
-                  <button class="categories__link outline btn" tabindex="-1">Философия</button>
+                  <a class="categories__link outline btn" tabindex="-1">Философия</a>
                 </label>
                 <label class="categories__label" data-index="10">
                   <input type="checkbox" name="checkbox" class="categories__checkbox" aria-label="Выберите категорию Учебная литература">
                   <span class="categories__check"></span>
-                  <button class="categories__link outline btn" tabindex="-1">Учебная литература</button>
+                  <a class="categories__link outline btn" tabindex="-1">Учебная литература</a>
                 </label>
                 <label class="categories__label" data-index="11">
                   <input type="checkbox" name="checkbox" class="categories__checkbox" aria-label="Выберите категорию Журналы и газеты">
                   <span class="categories__check"></span>
-                  <button class="categories__link outline btn" tabindex="-1">Журналы и газеты</button>
+                  <a class="categories__link outline btn" tabindex="-1">Журналы и газеты</a>
                 </label>
               </div>
             </div>
