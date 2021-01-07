@@ -1,8 +1,10 @@
 export function formMaskValidate(IMask, JustValidate) {
+  const form = document.querySelector('.contacts-form')
   const inputFrom = document.querySelector('.range__form [name="inputFrom"]')
   const inputTo = document.querySelector('.range__form [name="inputTo"]')
-  const inputPhone = document.querySelector('.contacts-form [name="contactsPhone"]')
-  
+  const inputPhone = document.querySelector('.contacts-form [name="Phone"]')
+  const inputName = document.querySelector('.contacts-form [name="Name"]')
+
   const rangeOptions = {
     mask: Number,
     min: 50,
@@ -31,7 +33,6 @@ export function formMaskValidate(IMask, JustValidate) {
         function: (name, value) => {
   
           if (phoneMask.unmaskedValue) {
-            console.log(phoneMask.unmaskedValue)
             return phoneMask.unmaskedValue.length === 10
           }
         },
@@ -52,10 +53,37 @@ export function formMaskValidate(IMask, JustValidate) {
       selectorWrap: '.contacts-form__input-wrap',
       fadeOutTime: 6000
     },
-    submitHandler: function (form, values, ajax) {
-      return
+    submitHandler: () => {
+
+      handleSubmit(form.action, form.method, new FormData(form))
+      form.reset()
+      inputPhone.classList.add(`success`)
+      inputName.classList.add(`success`)
     }
   }
+
+  function handleSubmit(url, method, body) {
+
+    if (url.slice(-3) === `...`) {
+      console.log(`Enter your Formspree endpoint in the form`)
+      return
+    }
+
+    fetch(url, {
+      method: method,
+      body: JSON.stringify(Object.fromEntries(body)),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    }).then(response => console.log(response))
+  }
+
+  inputPhone.addEventListener(`input`, () => resetBorders(inputPhone))
+  inputName.addEventListener(`input`, () => resetBorders(inputName))
   
+  function resetBorders(input) {
+    input.classList.remove(`success`)
+  }
+
   new window.JustValidate('.contacts-form', formOptions)
 }
