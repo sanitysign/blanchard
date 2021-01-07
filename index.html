@@ -966,18 +966,18 @@
             <p class="contacts__showroom">Шоурум №4</p>
             <p class="contacts__address">Леонтьевский переулок, дом 5, строение 1</p>
           </div>
-          <form class="contacts__form contacts-form">
+          <form class="contacts__form contacts-form" action="https://formspree.io/f/..." method="POST">
             <p class="contacts-form__call contacts-form__action">Заказать обратный звонок</p>
             <div class="contacts-form__input-wrap">
               <label for="contactsName" class="contacts-form__label visually-hidden">Введите ваше имя</label>
-              <input type="text" id="contactsName" name="contactsName" class="contacts-form__input contacts-form__input_name" placeholder="Имя*" required data-validate-field="name">
+              <input type="text" id="contactsName" name="Name" class="contacts-form__input contacts-form__input_name" placeholder="Имя*" required data-validate-field="name">
             </div>
             <div class="contacts-form__input-wrap">
               <label for="contactsPhone" class="contacts-form__label visually-hidden">Введите ваш номер телефона</label>
-              <input type="text" id="contactsPhone" name="contactsPhone" class="contacts-form__input contacts-form__input_tel" placeholder="Телефон*" required data-validate-field="phone">
+              <input type="text" id="contactsPhone" name="Phone" class="contacts-form__input contacts-form__input_tel" placeholder="Телефон*" required data-validate-field="phone">
             </div>
             <div class="contacts-form__btn-wrap"></div>
-            <button type="submit" class="contacts-form__btn btn"><span class="contacts-form__btn-text">Заказать</span></button>
+            <button type="submit" name="submit" class="contacts-form__btn btn"><span class="contacts-form__btn-text">Заказать</span></button>
             <p class="contacts-form__click contacts-form__action">Связаться в один клик</p>
             <div class="contacts-form__socials-wrap">
               <a href="https://wa.me/-------number-------" class="contacts-form__socials contacts-form__socials_wa outline" aria-label="Ссылка на Whatsapp"></a>
