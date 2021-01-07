@@ -18,6 +18,7 @@ import './showAllEvents.js'
 import './handleCheckboxes.js'
 import './handleDropdown.js'
 import './createCategoriesColumns.js'
+import './fullscreenImage.js'
 
 import '../styles/main.scss'
 

@@ -30,7 +30,7 @@ module.exports = env => {
       path: path.resolve(__dirname, './dist'),
       filename: 'scripts/[name].js',
       // publicPath: 'http://localhost:8080/',
-      // publicPath: 'C:/AlphaFolder/Work/Skillbox/blanchard/dist/',
+      publicPath: 'C:/AlphaFolder/Work/Skillbox/blanchard/dist/',
     },
   
     devtool: env.serve ? 'inline-cheap-module-source-map' : 'source-map' ,
