@@ -55,5 +55,8 @@ $RECYCLE.BIN/
 /*.png
 /*.jpg
 
+#Favicon
+!favicon.*
+
 #Node
 node_modules
