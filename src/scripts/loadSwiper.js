@@ -28,6 +28,12 @@ export function loadSwiper({gallerySwiper, issuesSwiper, partnersSwiper, eventsS
           type: 'fraction',
         },
         breakpoints: {
+          324: {
+            slidesPerView: 1,
+            slidesPerColumn: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 0,
+          },
           576: {
             slidesPerView: 2,
             slidesPerColumn: 2,
@@ -40,7 +46,7 @@ export function loadSwiper({gallerySwiper, issuesSwiper, partnersSwiper, eventsS
             slidesPerGroup: 2,
             spaceBetween: 34,
           },
-          1025: {
+          1028: {
             slidesPerView: 3,
             slidesPerColumn: 2,
             slidesPerGroup: 3,
@@ -86,7 +92,7 @@ export function loadSwiper({gallerySwiper, issuesSwiper, partnersSwiper, eventsS
             slidesPerGroup:2,
             spaceBetween: 34
           },
-          1023: {
+          940: {
             slidesPerView: 2,
             slidesPerGroup:2,
             spaceBetween: 50

@@ -290,9 +290,9 @@ body {
 
 @keyframes breath {
   from {
-    background-size: auto 100%;
+    transform: translate(-50%, -50%) scale(1);
   } 100% {
-    background-size: auto 105%;
+    transform: translate(-50%, -50%) scale(1.05);
   }
 }
 
@@ -602,28 +602,38 @@ body .hero-bg-fade::after {
   padding-bottom: 122px;
   position: relative;
   width: 100%;
-  max-width: 1920px;
   margin: 0 auto;
-  background-image: url(../img/hero-bg-1.webp);
-  background-size: cover;
-  background-position: center bottom;
-
-  &::after {
-    position: absolute;
-    content: "";
-    display: block;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: $bg-black;
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
-  }
+  overflow: hidden;
 
   &__container {
     position: relative;
     z-index: 2;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%) scale(1);
+    background-image: url(../img/hero-bg-1.webp);
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $bg-black;
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+    }
   }
 
   &__heading {
@@ -794,7 +804,6 @@ body .hero-bg-fade::after {
 
 .gallery {
   width: 100%;
-  max-width: 1920px;
   margin: 0 auto;
   background-image: url(../img/gallery-bg.webp);
   background-size: cover;
@@ -1565,7 +1574,6 @@ body .hero-bg-fade::after {
   padding-top: 80px;
   padding-bottom: 80px;
   width: 100%;
-  max-width: 1920px;
   background-image: url(../img/issues-bg.webp);
   background-size: cover;
   background-position: center bottom;

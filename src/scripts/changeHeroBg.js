@@ -1,5 +1,6 @@
-const hero = document.querySelector('.hero')
-const INTERVAL = 15000
+const hero = document.querySelector('.hero__bg')
+
+const INTERVAL = 5000
 let index = 0
 let transition
 
