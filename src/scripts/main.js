@@ -26,7 +26,10 @@ document.body.onsubmit = (e) => {
   e.preventDefault()
 }
 
-$(`a`).on(`click`, function(e) {
+document.addEventListener(`click`, function(e) {
+
+  if (!e.target.closest(`a`)) return
+
   e.preventDefault()
 })
 
